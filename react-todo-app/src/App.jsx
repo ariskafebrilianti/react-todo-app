@@ -1,12 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Todos from './components/Todos';
 import './App.css'
 
-import React, { useState } from 'react'
-
 function App() {
-  const [todos, setTodos] = useState([
+  const [todos,  setTodos] = useState([
     {
       id: 1,
       title: 'Finish Progate React Course',
@@ -32,7 +29,9 @@ function App() {
       {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>
       })}
+      <Todos todos={todos} />
     </div>
+    
   )
 }
 
