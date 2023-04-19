@@ -3,11 +3,11 @@ import Todos from './components/Todos';
 import TodoItem from './components/TodoItem'
 
 function App() {
-  const [todos] = useState([
+  const [todos, setTodos] = useState([
     {
       id: 1,
       title: 'Finish Progate React Course',
-      completed: false,
+      completed: true,
     },
     {
       id: 2,
@@ -23,14 +23,26 @@ function App() {
 
   console.log(todos)
 
+    // Definisikan toggleCompleted di sini
+    const toggleCompleted = (todoId) => {
+      const updatedTodos = todos.map((todo) => {
+        if (todo.id === todoId) {
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+      setTodos(updatedTodos)
+    }
+    
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      <Todos todos={todos} />
+      <Todos todos={todos} toggleCompleted={toggleCompleted} />
       <TodoItem/>
     </div>
-    
-  )
+      )
+
+      
 }
 
 const styles = {
