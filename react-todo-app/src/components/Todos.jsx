@@ -3,6 +3,7 @@ import TodoItem from './TodoItem'
 
 // Menerima function toggleCompleted sebagai sebuah prop
 const Todos = ({ todos, toggleCompleted }) => {
+  console.log(todos)
   return (
     <div style={styles.container}>
       {todos.map((todo) => {

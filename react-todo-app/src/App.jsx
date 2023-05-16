@@ -38,7 +38,6 @@ function App() {
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
       <Todos todos={todos} toggleCompleted={toggleCompleted} />
-      <TodoItem/>
     </div>
       )
 

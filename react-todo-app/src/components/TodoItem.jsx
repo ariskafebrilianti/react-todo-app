@@ -3,6 +3,7 @@ import React from 'react'
 const TodoItem = ({ todo, toggleCompleted }) => {
   // Definisikan function getTodoTitleStyle di sini
   const getTodoTitleStyle = () => {
+    console.log(todo,"<")
     if (todo.completed === true) {
       return { textDecoration: 'line-through' }
     } else {
