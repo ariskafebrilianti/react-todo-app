@@ -21,7 +21,6 @@ function App() {
     },
   ])
 
-  console.log(todos)
 
     // Definisikan toggleCompleted di sini
     const toggleCompleted = (todoId) => {
@@ -40,8 +39,6 @@ function App() {
       <Todos todos={todos} toggleCompleted={toggleCompleted} />
     </div>
       )
-
-      
 }
 
 const styles = {
